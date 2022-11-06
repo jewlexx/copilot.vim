@@ -671,7 +671,7 @@ function! s:commands.version(opts) abort
   let info = copilot#agent#EditorInfo()
   echo 'copilot.vim ' .info.editorPluginInfo.version
   echo info.editorInfo.name . ' ' . info.editorInfo.version
-  if exists('s:agent.node_version')
+  if exists('s:')
     echo 'copilot/dist/agent.js ' . s:agent.Call('getVersion', {}).version
     echo 'Node.js ' . s:agent.node_version
   else
